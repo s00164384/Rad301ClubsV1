@@ -5,7 +5,13 @@
 }
 
 <h2>Index</h2>
-
+<form method="get">
+    <label>First Name</label>
+    <input type="search" name="Firstname" value=@ViewBag.VFname />
+    <label>Surname</label>
+    <input type="search" name="Surname" value="@ViewBag.VSname" />
+    <input type="submit" name="Search by Surname" />
+</form>
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>

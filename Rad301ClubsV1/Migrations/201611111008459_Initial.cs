@@ -36,6 +36,7 @@ namespace Rad301ClubsV1.Migrations
                     {
                         Id = c.String(nullable: false, maxLength: 128),
                         DateJoined = c.DateTime(nullable: false),
+                        StudentID = c.String(),
                         Email = c.String(maxLength: 256),
                         EmailConfirmed = c.Boolean(nullable: false),
                         PasswordHash = c.String(),

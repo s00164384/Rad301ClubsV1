@@ -11,7 +11,7 @@ using Rad301ClubsV1.Models.ClubModel;
 
 namespace Rad301ClubsV1.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin,ClubAdmin")]
     public class ClubsController : Controller
     {
         private ClubContext db = new ClubContext();
@@ -41,6 +41,7 @@ namespace Rad301ClubsV1.Controllers
         }
 
         // GET: Clubs/Create
+        [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
             return View();
@@ -51,6 +52,7 @@ namespace Rad301ClubsV1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles ="Admin")]
         public async Task<ActionResult> Create([Bind(Include = "ClubId,ClubName,CreationDate")] Club club)
         {
             if (ModelState.IsValid)
@@ -95,6 +97,7 @@ namespace Rad301ClubsV1.Controllers
         }
 
         // GET: Clubs/Delete/5
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Delete(int? id)
         {
             if (id == null)

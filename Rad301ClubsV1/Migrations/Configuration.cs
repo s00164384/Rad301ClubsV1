@@ -36,6 +36,7 @@ namespace Rad301ClubsV1.Migrations
                 StudentID = "S12345678",
                 Email = "S12345678@mail.itsligo.ie",
                 DateJoined = DateTime.Now,
+                EmailConfirmed = true,
                 UserName = "S12345678@mail.itsligo.ie",
                 PasswordHash = new PasswordHasher().HashPassword("Ss1234567$1"),
                 SecurityStamp = Guid.NewGuid().ToString(),
@@ -46,16 +47,18 @@ namespace Rad301ClubsV1.Migrations
                 StudentID = "ppowell",
                 Email = "powell.paul@itsligo.ie",
                 DateJoined = DateTime.Now,
+                EmailConfirmed = true,
                 UserName = "powell.paul@itsligo.ie",
                 PasswordHash = new PasswordHasher().HashPassword("Ppowell$1"),
                 SecurityStamp = Guid.NewGuid().ToString(),
             });
 
-            context.Users.AddOrUpdate(u => u.Email,new ApplicationUser
+            context.Users.AddOrUpdate(u => u.Email, new ApplicationUser
             {
-                StudentID= "S00000001",
+                StudentID = "S00000001",
                 Email = "S00000001@mail.itsligo.ie",
                 DateJoined = DateTime.Now,
+                EmailConfirmed = true,
                 UserName = "S00000001@mail.itsligo.ie",
                 PasswordHash = new PasswordHasher().HashPassword("SS00000001$1"),
                 SecurityStamp = Guid.NewGuid().ToString(),
@@ -66,6 +69,10 @@ namespace Rad301ClubsV1.Migrations
             {
                 manager.AddToRoles(admin.Id, new string[] { "Admin", "Member", "ClubAdmin" });
             }
+            else {
+                throw new Exception { Source = "Did not find user" };
+            }
+
             ApplicationUser member = manager.FindByEmail("S12345678@mail.itsligo.ie");
             if (member != null)
             {

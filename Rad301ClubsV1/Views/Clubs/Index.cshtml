@@ -12,7 +12,8 @@
 </form>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @if (User.IsInRole("Admin"))
+    { Html.ActionLink("Create New", "Create"); }
 </p>
 <table class="table">
     <tr>
