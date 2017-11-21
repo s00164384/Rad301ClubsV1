@@ -63,7 +63,7 @@ namespace Rad301ClubsV1.Migrations
                 PasswordHash = new PasswordHasher().HashPassword("SS00000001$1"),
                 SecurityStamp = Guid.NewGuid().ToString(),
             });
-
+            context.SaveChanges();
             ApplicationUser admin = manager.FindByEmail("powell.paul@itsligo.ie");
             if (admin != null)
             {

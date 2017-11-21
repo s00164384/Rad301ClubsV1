@@ -1,0 +1,1 @@
+Server=tcp:rad300server.database.windows.net,1433;Initial Catalog=rad30020172018;Persist Security Info=False;User ID=adminpp;Password=ppowell$1;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;

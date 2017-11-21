@@ -185,6 +185,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ClubEventsController.cs" />
     <Compile Include="Controllers\ClubsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -196,9 +197,9 @@
     <Compile Include="Migrations\201611111008459_Initial.Designer.cs">
       <DependentUpon>201611111008459_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\ClubModelMigrations\201611011805192_Initial.cs" />
-    <Compile Include="Migrations\ClubModelMigrations\201611011805192_Initial.Designer.cs">
-      <DependentUpon>201611011805192_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\ClubModelMigrations\201711211129332_Initial_Migration.cs" />
+    <Compile Include="Migrations\ClubModelMigrations\201711211129332_Initial_Migration.Designer.cs">
+      <DependentUpon>201711211129332_Initial_Migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\ClubModelMigrations\Configuration.cs" />
     <Compile Include="Migrations\ClubModelMigrations\StudentData.cs" />
@@ -227,7 +228,12 @@
     <EmbeddedResource Include="Migrations\201611111008459_Initial.resx">
       <DependentUpon>201611111008459_Initial.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ClubModelMigrations\201711211129332_Initial_Migration.resx">
+      <DependentUpon>201711211129332_Initial_Migration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\ClubModelMigrations\TestStudents.csv" />
+    <None Include="Properties\PublishProfiles\ClubsV1 - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\ClubsV1 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\pprad301ClubsApp - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\pprad301ClubsApp - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -288,6 +294,11 @@
     <Content Include="Views\Students\Details.cshtml" />
     <Content Include="Views\Students\Edit.cshtml" />
     <Content Include="Views\Students\Index.cshtml" />
+    <Content Include="Views\ClubEvents\Create.cshtml" />
+    <Content Include="Views\ClubEvents\Delete.cshtml" />
+    <Content Include="Views\ClubEvents\Details.cshtml" />
+    <Content Include="Views\ClubEvents\Edit.cshtml" />
+    <Content Include="Views\ClubEvents\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -299,11 +310,6 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\ClubModelMigrations\201611011805192_Initial.resx">
-      <DependentUpon>201611011805192_Initial.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

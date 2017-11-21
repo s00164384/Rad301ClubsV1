@@ -1,4 +1,5 @@
 ﻿add-Migration -ConfigurationTypeName Rad301ClubsV1.Migrations.Configuration
 update-database -ConfigurationTypeName Rad301ClubsV1.Migrations.Configuration
 
+add-migration -ConfigurationTypeName Rad301ClubsV1.Migrations.ClubModelMigrations.Configuration
 update-database -ConfigurationTypeName Rad301ClubsV1.Migrations.ClubModelMigrations.Configuration
