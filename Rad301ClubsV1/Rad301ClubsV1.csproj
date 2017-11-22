@@ -197,9 +197,9 @@
     <Compile Include="Migrations\201611111008459_Initial.Designer.cs">
       <DependentUpon>201611111008459_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\ClubModelMigrations\201711211129332_Initial_Migration.cs" />
-    <Compile Include="Migrations\ClubModelMigrations\201711211129332_Initial_Migration.Designer.cs">
-      <DependentUpon>201711211129332_Initial_Migration.cs</DependentUpon>
+    <Compile Include="Migrations\ClubModelMigrations\201711221112012_Club initialise.cs" />
+    <Compile Include="Migrations\ClubModelMigrations\201711221112012_Club initialise.Designer.cs">
+      <DependentUpon>201711221112012_Club initialise.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\ClubModelMigrations\Configuration.cs" />
     <Compile Include="Migrations\ClubModelMigrations\StudentData.cs" />
@@ -228,8 +228,8 @@
     <EmbeddedResource Include="Migrations\201611111008459_Initial.resx">
       <DependentUpon>201611111008459_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\ClubModelMigrations\201711211129332_Initial_Migration.resx">
-      <DependentUpon>201711211129332_Initial_Migration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\ClubModelMigrations\201711221112012_Club initialise.resx">
+      <DependentUpon>201711221112012_Club initialise.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\ClubModelMigrations\TestStudents.csv" />
     <None Include="Properties\PublishProfiles\ClubsV1 - FTP.pubxml" />
